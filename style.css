@@ -17,8 +17,7 @@ body {
     width: 100vw;
     height: 100vh;
     object-fit: cover; /* 縦横比を維持*/
-    opacity: 0.4; /* 半透明の度合い */
-    z-index: 0; /* 最背面に移動 */
+    z-index: -1; /* 最背面に移動 */ 
     pointer-events: none; /* 画像をクリックできないようにする */
 }
 
