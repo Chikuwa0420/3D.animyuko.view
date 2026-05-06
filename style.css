@@ -9,6 +9,19 @@ body {
     align-items: center;
     height: 100vh;
 }
+/* 背景画像のスタイル */
+.back-image {
+    position: fixed; /* 画面に固定 */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* 縦横比を維持*/
+    opacity: 0.4; /* 半透明の度合い */
+    z-index: 0; /* 最背面に移動 */
+    pointer-events: none; /* 画像をクリックできないようにする */
+}
+
 
 /* プラットフォームのカードデザイン */
 .container {
@@ -36,8 +49,10 @@ header p {
 
 /* 3Dモデル表示エリアのサイズ調整 */
 model-viewer {
+    display: block;
+    margin: 0 auto;/* 中央に配置 */
     width: 80%;
-    height: 80vh;
+    height: 60vh;
     background-color: #eef2f5;
     border-radius: 12px;
     position: relative; /* ボタンの絶対配置の基準にするため */
