@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #46060e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,14 +18,14 @@ body {
     height: 100vh;
     object-fit: cover; /* 縦横比を維持*/
     z-index: -1; /* 最背面に移動 */ 
-    pointer-events: none; /* 画像をクリックできないようにする */
+    pointer-events: none; /* 画像をクリックできないようにする */ 
 }
 
 
 /* プラットフォームのカードデザイン */
 .container {
     text-align: center;
-    background: white;
+    background: rgb(224, 102, 118);
     padding: 24px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -34,14 +34,14 @@ body {
 }
 
 header h1 {
-    font-size: 1.4rem;
-    color: #333;
-    margin-bottom: 8px;
+    font-size: 3.0rem;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 1.5rem;
+    color: #ffffff;
     margin-bottom: 24px;
     line-height: 1.5;
 }
@@ -52,30 +52,31 @@ model-viewer {
     margin: 0 auto;/* 中央に配置 */
     width: 80%;
     height: 60vh;
-    background-color: #eef2f5;
+    background-color: #f7b6bb;
     border-radius: 12px;
     position: relative; /* ボタンの絶対配置の基準にするため */
 }
 
 /* ARボタンのデザイン */
 #ar-button {
-    background-color: #007aff;
-    color: white;
+    background-color: transparent;
     border: none;
-    padding: 14px 28px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 30px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    white-space: nowrap;
-    transition: background-color 0.2s;
+    width: 50%;
+     padding: 0;
+}
+
+#ar-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+     padding: 0;
 }
 
 #ar-button:active {
-    background-color: #005bb5;
+    opacity: 0.6;
 }
