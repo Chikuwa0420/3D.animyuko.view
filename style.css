@@ -1,0 +1,67 @@
+/* 全体のリセットと背景設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* プラットフォームのカードデザイン */
+.container {
+    text-align: center;
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+/* 3Dモデル表示エリアのサイズ調整 */
+model-viewer {
+    width: 80%;
+    height: 80vh;
+    background-color: #eef2f5;
+    border-radius: 12px;
+    position: relative; /* ボタンの絶対配置の基準にするため */
+}
+
+/* ARボタンのデザイン */
+#ar-button {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+#ar-button:active {
+    background-color: #005bb5;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>3D.animyuko.view</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- model-viewerライブラリの読み込み -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>3D.animyuko.view</h1>
+            <p>下のボタンを押して、あにみゅ子ちゃんをARで配置してみよう。</p>
+        </header>
+
+        <main>
+            <!-- 3Dモデル表示エリア -->
+            <model-viewer 
+                id="ar-viewer"
+                src="cube.glb" 
+                ar 
+                ar-modes="webxr scene-viewer quick-look" 
+                camera-controls 
+                auto-rotate
+                shadow-intensity="1">
+                
+                <!-- AR起動用のカスタムボタン -->
+                <button slot="ar-button" id="ar-button">
+                    📸 ARで表示する
+                </button>
+                
+            </model-viewer>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
